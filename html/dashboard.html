@@ -50,7 +50,21 @@
     </div>
     <div class="dashboard-section">
         <div class="menu">
-            <h3>Menu</h3>
+            <div style="width: 100%; display: flex;">
+                <div style="width: 60%">
+                    <h3>Menu</h3>
+                </div>
+                <div style="width: 40%">
+                    <select id="filter" class="form-control" onchange="filterItems()">
+                        <option selected>--Select--</option>
+                        <option>Available Item</option>
+                        <option>Price between $0 - $5</option>
+                        <option>Price between $5 - $10</option>
+                        <option>Price between $10 - $15</option>
+                        <option>Price more than $15</option>
+                    </select>
+                </div>
+            </div>
             <div id="menuList"></div>
         </div>
         <div class="order">

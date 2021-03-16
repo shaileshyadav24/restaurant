@@ -1,4 +1,5 @@
 var allMenus = [];
+var originalMenu = [];
 var orderItem = [];
 
 function loadAllMenus() {
@@ -6,7 +7,7 @@ function loadAllMenus() {
     $.ajax({
         url: "https://raw.githubusercontent.com/shaileshyadav24/menu.json/main/menu.json",
         success: function (result) {
-            allMenus = JSON.parse(result);
+            originalMenu = allMenus = JSON.parse(result);
             const element = document.getElementById("menuList");
             for (var i = 0; i < allMenus.length; i++) {
                 allMenus[i].selectedCount = 0;
@@ -35,6 +36,11 @@ function increaseQuantity(menu) {
                 itemFound = true;
             }
         });
+        originalMenu.forEach(function (item) {
+            if (menu.Id === item.Id) {
+                item.selectedCount = menu.selectedCount;
+            }
+        });
         if (!itemFound) {
             orderItem.push(menu);
         }
@@ -53,6 +59,11 @@ function decreaseQuantity(menu) {
             if (menu.Id === item.Id) {
                 item.selectedCount = menu.selectedCount;
                 idx = index;
+            }
+        });
+        originalMenu.forEach(function (item) {
+            if (menu.Id === item.Id) {
+                item.selectedCount = menu.selectedCount;
             }
         });
         if (orderItem[idx].selectedCount === 0) {
@@ -123,5 +134,58 @@ function logoutUser() {
         window.localStorage.removeItem("order");
         window.localStorage.removeItem("loggedInStatus");
         window.location.href = "index.html";
+    }
+}
+
+function filterItems() {
+    const element = document.getElementById("menuList");
+    element.innerHTML = "";
+    const filter = document.getElementById("filter");
+    allMenus = [];
+    switch (filter.selectedIndex) {
+        case 1:
+            originalMenu.forEach(function (data) {
+                if (data.Available > 0) {
+                    allMenus.push(data);
+                }
+            });
+            break;
+        case 2:
+            originalMenu.forEach(function (data) {
+                if (data.Price > 0 && data.Price < 5) {
+                    allMenus.push(data);
+                }
+            });
+            break;
+        case 3:
+            originalMenu.forEach(function (data) {
+                if (data.Price >= 5 && data.Price < 10) {
+                    allMenus.push(data);
+                }
+            });
+            break;
+        case 4:
+            originalMenu.forEach(function (data) {
+                if (data.Price >= 10 && data.Price < 15) {
+                    allMenus.push(data);
+                }
+            });
+            break;
+        case 5:
+            originalMenu.forEach(function (data) {
+                if (data.Price >= 15) {
+                    allMenus.push(data);
+                }
+            });
+            break;
+        default:
+            allMenus = JSON.parse(JSON.stringify(originalMenu));
+            break;
+    }
+
+    for (var i = 0; i < allMenus.length; i++) {
+        element.innerHTML +=
+            "<div class='item-details' id='" + allMenus[i].Id + "Items'></div>"
+        renderCount(allMenus[i]);
     }
 }
