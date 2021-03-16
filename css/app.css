@@ -1,3 +1,5 @@
+/* Shailesh Yadav - 101332535 */
+
 .logo {
     width: 100px;
 }
@@ -328,4 +330,3 @@ input.quantity:disabled {
 
 /* laptop */
 @media screen and (min-device-width: 1025) and (-webkit-min-device-pixel-ratio: 1) {}
-
