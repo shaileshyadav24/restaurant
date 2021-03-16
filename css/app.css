@@ -51,28 +51,6 @@ button[type=submit] {
     margin-top: 10px;
 }
 
-.menu {
-    width: 80%;
-    padding: 2em;
-    margin: 2%;
-    background: white;
-    height: 75vh;
-    max-height: 75vh;
-}
-
-.order {
-    width: 40%;
-    margin: 2%;
-    padding: 2em;
-    background: white;
-    height: 350px;
-    max-height: 350px;
-}
-
-.dashboard-section {
-    display: flex;
-    width: 100%;
-}
 
 #menuList {
     max-height: 65vh;
@@ -149,6 +127,7 @@ button[type=submit] {
     font-size: 12px;
     float: right;
     padding-top: 5px;
+    text-decoration: underline;
 }
 
 .qty .count {
@@ -222,4 +201,130 @@ input.quantity:disabled {
 
 .margt5 {
     margin-top: 5px;
+}
+
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .menu {
+        width: 100%;
+        padding: 2em;
+        margin: 2%;
+        background: white;
+        height: 75vh;
+        max-height: 75vh;
+    }
+
+
+    .order {
+        width: 100%;
+        margin: 2%;
+        padding: 2em;
+        background: white;
+        height: 350px;
+        max-height: 350px;
+    }
+
+    .dashboard-section {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .menu {
+        width: 100%;
+        padding: 1em;
+        margin: 5px 0;
+        background: white;
+        height: 75vh;
+        max-height: 75vh;
+    }
+
+
+    .order {
+        width: 100%;
+        margin: 5px 0;
+        padding: 1em;
+        background: white;
+        height: 350px;
+        max-height: 350px;
+    }
+
+    .dashboard-section {
+        display: block;
+        width: 100%;
+    }
+
+    .reg-form {
+        width: 95%;
+        margin: 2%;
+        background: white;
+        height: 450px;
+        padding: 2em;
+    }
+
+    .login-form {
+        width: 95%;
+        margin: 5%;
+        background: white;
+        height: 280px;
+        padding: 2em;
+    }
+
+    .contact-details {
+        width: 95%;
+        margin: 2%;
+        padding: 2em;
+        background: white;
+        height: 420px;
+        max-height: 420px;
+    }
+
+    .item-price {
+        width: 15%;
+    }
+
+    .item-name {
+        width: 45%;
+    }
+
+    .item-button {
+        width: 40%;
+    }
+
+    .footer-header {
+        color: #fff;
+        margin: 10px 0 0 0;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+
+
+/* laptop */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    .menu {
+        width: 80%;
+        padding: 2em;
+        margin: 2%;
+        background: white;
+        height: 75vh;
+        max-height: 75vh;
+    }
+
+
+    .order {
+        width: 40%;
+        margin: 2%;
+        padding: 2em;
+        background: white;
+        height: 350px;
+        max-height: 350px;
+    }
+
+    .dashboard-section {
+        display: flex;
+        width: 100%;
+    }
 }
