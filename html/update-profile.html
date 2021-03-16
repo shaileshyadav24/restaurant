@@ -14,14 +14,14 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
 
-    <script type="text/javascript" src="../js/dashboard.js">
+    <script type="text/javascript" src="../js/update-profile.js">
 
     </script>
     <link rel="stylesheet" href="../css/app.css">
 
 </head>
 
-<body onload="loadAllMenus()">
+<body onload="showOrderOnPage()">
     <div class="header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
             <div class="container">
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="update-profile.html" class="nav-link">Update Profile</a>
+                            <a href="dashboard.html" class="nav-link">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a href="update-passoword.html" class="nav-link">Update Password</a>
@@ -49,14 +49,24 @@
         </nav>
     </div>
     <div class="dashboard-section">
-        <div class="menu">
-            <h3>Menu</h3>
-            <div id="menuList"></div>
-        </div>
-        <div class="order">
-            <h3>Order</h3>
-            <div id="orderList"></div>
-            <div id="finalOrderRate"></div>
+        <div class="contact-details">
+            <div id="quantityList"></div>
+            <div>
+                <form onsubmit="finalizeOrder(); return false">
+                    <input type="text" required placeholder="Name*" class="form-control login-input" id="nameOfUser">
+                    <input type="email" required placeholder="Email Address*" class="form-control login-input"
+                        id="emailOfUser">
+                    <input type="text" required placeholder="Phone Number*" class="form-control login-input"
+                        id="phoneOfUser">
+                    <input type="text" required placeholder="Shipping Address*" class="form-control login-input"
+                        id="shipAddressOfUser">
+                    <input type="text" required placeholder="Billing Address*" class="form-control login-input"
+                        id="billAddressOfUser">
+                    <div id="errorMessage" class="text-danger font-weight-bold d-none">Error message</div>
+                    <button class="w-100 btn btn-lg text-light bg-dark" type="submit">Submit</button>
+                    <a href="dashboard.html" class="btn text-center w-100">Return to menu</a>
+                </form>
+            </div>
         </div>
     </div>
 
