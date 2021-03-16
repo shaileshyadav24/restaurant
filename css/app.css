@@ -1,0 +1,221 @@
+.logo {
+    width: 100px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-header {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-desc {
+    color: #fff;
+    font-size: 12px;
+}
+
+body {
+    background-image: url("../assets/index.jpg");
+}
+
+.login-input {
+    margin: 10px 0;
+}
+
+.login-form {
+    width: 50%;
+    margin: 5% 25% 0 25%;
+    background: white;
+    height: 280px;
+    padding: 2em;
+}
+
+.reg-form {
+    width: 50%;
+    margin: 5% 25% 0 25%;
+    background: white;
+    height: 450px;
+    padding: 2em;
+}
+
+h2 {
+    text-align: center;
+    ;
+}
+
+button[type=submit] {
+    margin-top: 10px;
+}
+
+.menu {
+    width: 80%;
+    padding: 2em;
+    margin: 2%;
+    background: white;
+    height: 75vh;
+    max-height: 75vh;
+}
+
+.order {
+    width: 40%;
+    margin: 2%;
+    padding: 2em;
+    background: white;
+    height: 350px;
+    max-height: 350px;
+}
+
+.dashboard-section {
+    display: flex;
+    width: 100%;
+}
+
+#menuList {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+#orderList {
+    height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+
+.item-details {
+    padding: 5px 0;
+    display: flex;
+    width: 100%;
+}
+
+.item-name {
+    width: 50%;
+}
+
+.item-price {
+    padding: 20px 0;
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+}
+
+.item-button {
+    width: 30%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+.order-name {
+    width: 50%;
+}
+
+.order-price {
+    width: 20%;
+    text-align: right;
+}
+
+.order-button {
+    width: 30%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+.discount-name {
+    width: 30%;
+}
+
+.discount-price {
+    width: 40%;
+    text-align: right;
+}
+
+.discount-button {
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rating-label {
+    font-size: 12px;
+    float: right;
+    padding-top: 5px;
+}
+
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px;
+    min-width: 35px;
+    text-align: center;
+}
+
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+
+input.quantity {
+    border: 0;
+    width: 2%;
+}
+
+input.quantity::-webkit-outer-spin-button,
+input.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.quantity:disabled {
+    background-color: white;
+}
+
+.padd0 {
+    padding: 0;
+}
+
+.contact-details {
+    width: 50%;
+    margin: 5% 25% 0 25%;
+    padding: 2em;
+    background: white;
+    height: 420px;
+    max-height: 420px;
+}
+
+#quantityList {
+    text-align: right;
+}
